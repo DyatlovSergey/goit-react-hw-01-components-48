@@ -1,28 +1,30 @@
 // import propTypes from "prop-types";
 
-export default function Statistics({ label, percentage, stats, title }) {
-  return (
-    <section class="statistics">
-      <h2 class="title">Upload stats</h2>
+// export default function Statistic({ label, percent }) {
+//   return (
+//     <li>
+//       <span className="label">{label}</span>
+//       <span className="percentage">{percent}</span>
+//     </li>
+//   );
+// }
 
-      <ul class="stat-list">
-        <li class="item">
-          <span class="label">{label}</span>
-          <span class="percentage">{percentage}</span>
-        </li>
-        <li class="item">
-          <span class="label">{label}</span>
-          <span class="percentage">14%</span>
-        </li>
-        <li class="item">
-          <span class="label">.pdf</span>
-          <span class="percentage">41%</span>
-        </li>
-        <li class="item">
-          <span class="label">.mp4</span>
-          <span class="percentage">12%</span>
-        </li>
-      </ul>
-    </section>
+// Statistic.poroTypes = {
+//   label: propTypes.string,
+//   percent: propTypes.number,
+// };
+
+import propTypes from "prop-types";
+export default function Statistics({ label, percent }) {
+  return (
+    <li>
+      <span className="label">{label}</span>
+      <span className="percentage">{percent}</span>
+    </li>
   );
 }
+
+Statistics.poroTypes = {
+  label: propTypes.string,
+  percent: propTypes.number,
+};

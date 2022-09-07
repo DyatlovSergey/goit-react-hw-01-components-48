@@ -1,33 +1,11 @@
-// import logo from "./logo.svg";
-// import "./App.css";
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
-
-// export default App;
-
 import Profile from "./components/Profile";
 import user from "./user.json";
-import data from "./data.json";
-import Statistics from "./components/Statistics";
+import friends from "./friends.json";
+import transactions from "./transactions.json";
+import statistics from "./data.json";
+import StatisticList from "./components/StatisticList";
+import FriendsList from "./components/FriendList";
+import TransactionHistory from "./components/TransactionHistory";
 
 export default function App() {
   return (
@@ -40,7 +18,9 @@ export default function App() {
         stats={user.stats}
       />
 
-      <Statistics title="Upload stats" stats={data} />
+      <StatisticList title="Upload stats" items={statistics} />
+      <FriendsList items={friends} />
+      <TransactionHistory items={transactions} />
     </div>
   );
 }
